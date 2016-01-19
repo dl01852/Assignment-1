@@ -32,7 +32,7 @@ public abstract class Computer {
     public String getOperatingSystem(){return operatingSystem.OsType();}
     public String getCPUMaker(){return cpu.CpuType();}
     public String getGPUMaker(){return gpu.GpuType();}
-    public String getMotherBoard(){return motherBoard.MotherBoard();}
+    public String getMotherBoard(){return motherBoard.MotherBoardType();}
 
 
     // setters
@@ -43,11 +43,11 @@ public abstract class Computer {
     public void setGpuType(IGpuMaker gpuType){this.gpu = gpuType;}
     public void setMotherBoard(IMotherBoard mobo){this.motherBoard = mobo;}
 
-    @Override
-    public String toString()
+
+    public String peformDiagnostics()
     {
         StringBuilder sb = new StringBuilder();
-        sb.append(String.format("RAM: %s%nProcessor Speed: %.3f%nMotherBoard: %s%n",ram,processorSpeed,motherBoard));
+        sb.append(String.format("RAM: %sGB%nProcessor Speed: %.2fGHz%nMotherBoard: %s%n",ram,processorSpeed,motherBoard.MotherBoardType()));
         sb.append(String.format("Operating System: %s%nCPU: %s%nGPU: %s%n", operatingSystem.OsType(),cpu.CpuType(), gpu.GpuType()));
         return sb.toString();
     }
