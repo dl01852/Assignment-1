@@ -19,3 +19,8 @@ class Amd implements ICpuMaker
         return "AMD CPU";
     }
 }
+
+class SnapDragon implements ICpuMaker
+{
+    public String CpuType(){return "SnapDragon CPU";}
+}

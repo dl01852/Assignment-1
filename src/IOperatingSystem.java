@@ -27,3 +27,12 @@ class Osx implements IOperatingSystem
         return "MAC OSX";
     }
 }
+
+class Ios implements  IOperatingSystem
+{
+    public String OsType(){return "iOS";}
+}
+class Android implements IOperatingSystem
+{
+    public String OsType(){return "Android Operating System";}
+}

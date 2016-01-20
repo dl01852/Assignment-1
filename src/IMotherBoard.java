@@ -36,5 +36,10 @@ class MoboAsRock implements IMotherBoard
     }
 }
 
+class MoboMini implements IMotherBoard
+{
+    public String MotherBoardType(){return "Phone/Tablet Motherboard";}
+}
+
 
 

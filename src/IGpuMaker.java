@@ -37,7 +37,7 @@ class GpuOnboard implements IGpuMaker
 {
    public String GpuType()
    {
-       return "No GPU, Onboard vidoe";
+       return "No GPU, Onboard video";
    }
 }
 

@@ -5,10 +5,10 @@ public abstract class Computer {
 
     private int ram;
     private double processorSpeed;
-    protected IOperatingSystem operatingSystem; // Interface that's for OS's(Operating Systems)
-    protected ICpuMaker cpu;
-    protected IGpuMaker gpu;
-    protected IMotherBoard motherBoard;
+    private IOperatingSystem operatingSystem; // Interface that's for OS's(Operating Systems)
+    private ICpuMaker cpu;
+    private IGpuMaker gpu;
+    private IMotherBoard motherBoard;
 
     // fully Loaded Constructor
     public Computer(int ram, double processorSpeed, IOperatingSystem os, ICpuMaker cpu, IGpuMaker gpu, IMotherBoard mobo)
@@ -51,4 +51,5 @@ public abstract class Computer {
         sb.append(String.format("Operating System: %s%nCPU: %s%nGPU: %s%n", operatingSystem.OsType(),cpu.CpuType(), gpu.GpuType()));
         return sb.toString();
     }
+
 }
